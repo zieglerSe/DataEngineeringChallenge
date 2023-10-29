@@ -1,0 +1,8 @@
+import json 
+import pandas as pd 
+
+#example of a message
+testJson = "{\"Unnamed: 0\":0,\"schema\":\"\\/mediawiki\\/recentchange\\/1.0.0\",\"id\":1389063147,\"type\":\"edit\",\"namespace\":0,\"title\":\"Q4063232\",\"comment\":\"\\/* wbcreateclaim-create:1| *\\/ [[Property:P646]]: \\/m\\/0f_0w5\",\"timestamp\":1611249084,\"user\":\"Lockal\",\"bot\":false,\"minor\":false,\"patrolled\":true,\"server_url\":\"https:\\/\\/www.wikidata.org\",\"server_name\":\"www.wikidata.org\",\"server_script_path\":\"\\/w\",\"wiki\":\"wikidatawiki\",\"parsedcomment\":\"\\u200e<span dir=\\\"auto\\\"><span class=\\\"autocomment\\\">\\u0421\\u043e\\u0437\\u0434\\u0430\\u043d\\u043e \\u0437\\u0430\\u044f\\u0432\\u043b\\u0435\\u043d\\u0438\\u0435: <\\/span><\\/span> <a href=\\\"\\/wiki\\/Property:P646\\\" title=\\\"Property:P646\\\">Property:P646<\\/a>: \\/m\\/0f_0w5\",\"meta_domain\":\"www.wikidata.org\",\"meta_uri\":\"https:\\/\\/www.wikidata.org\\/wiki\\/Q4063232\",\"meta_request_id\":\"YAm1vApAIDUAAFxATVAAAABN\",\"meta_stream\":\"mediawiki.recentchange\",\"meta_topic\":\"eqiad.mediawiki.recentchange\",\"meta_dt\":\"2021-01-21T17:11:24Z\",\"meta_partition\":0,\"meta_offset\":2887301937,\"meta_id\":\"f7126e3c-69f6-4b52-a563-11ea8c0996b0\",\"length_old\":6167,\"length_new\":6514,\"revision_old\":1307871082,\"revision_new\":1345601904}"
+
+data = json.loads(testJson)
+data = pd.DataFrame.from_dict(data, orient='index')
